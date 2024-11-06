@@ -18,5 +18,7 @@ public class MainController {
         logoImageView.setImage(new Image(getClass().getResourceAsStream("/images/Red-Summer.jpg")));
     }
     @FXML
-    protected void onStartButtonClicked(){}
+    protected void onStartButtonClicked(
+
+    ){}
 }

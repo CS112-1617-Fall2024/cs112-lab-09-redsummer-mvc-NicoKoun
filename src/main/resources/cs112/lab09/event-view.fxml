@@ -1,21 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-
-<BorderPane prefHeight="400.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cs112.lab09.controllers.EventViewController">
+<BorderPane prefHeight="400.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cs112.lab09.controllers.EventViewController">
    <right>
-      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <BorderPane prefHeight="366.0" prefWidth="254.0" BorderPane.alignment="CENTER">
          <top>
-            <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
+            <VBox alignment="TOP_CENTER" prefHeight="58.0" prefWidth="254.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="locationLabel" prefHeight="29.0" prefWidth="99.0" text="Location" />
+                  <Label fx:id="dateLabel" prefHeight="26.0" prefWidth="93.0" text="Date" />
+               </children></VBox>
          </top>
          <center>
-            <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
+            <VBox alignment="TOP_CENTER" prefHeight="484.0" prefWidth="254.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="descriptionLabel" alignment="TOP_CENTER" prefHeight="83.0" prefWidth="171.0" text="Description" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font size="9.0" />
+                     </font></Label>
+                  <Label fx:id="revisedDescriptionLabel" alignment="TOP_CENTER" prefHeight="206.0" prefWidth="172.0" text="RevisedDescription" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font size="9.0" />
+                     </font></Label>
+               </children></VBox>
          </center>
          <bottom>
-            <Hyperlink text="Hyperlink" BorderPane.alignment="CENTER" />
+            <Hyperlink fx:id="citationHyperlink" alignment="TOP_CENTER" onAction="#onCitationHyperlinkClicked" prefHeight="41.0" prefWidth="126.0" text="Source" BorderPane.alignment="CENTER" />
          </bottom>
       </BorderPane>
    </right>
+   <left>
+      <ImageView fx:id="eventImageView" fitHeight="332.0" fitWidth="245.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
+   </left>
+   <bottom>
+      <Button fx:id="closeButton" mnemonicParsing="false" onAction="#onCloseButtonClicked" prefHeight="34.0" prefWidth="87.0" text="Close" BorderPane.alignment="CENTER" />
+   </bottom>
 </BorderPane>

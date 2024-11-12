@@ -10,8 +10,8 @@ import java.io.IOException;
 public class MainApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("map-view.fxml")); //change back to main-view
-        Scene scene = new Scene(fxmlLoader.load(), 600, 400); //change back to 400, 600
+        FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("main-view.fxml")); //change back to main-view
+        Scene scene = new Scene(fxmlLoader.load(), 400, 600); //change back to 400, 600
         stage.setTitle("Revisionist History Map");
         stage.setScene(scene);
         stage.show();
